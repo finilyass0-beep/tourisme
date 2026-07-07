@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — TourismeMaroc</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><i class="fa-solid fa-mosque"></i></span>
+      Tourisme<span style="color:var(--color-terracotta)">Maroc</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#accueil">Accueil</a>
+      <a href="index.html#destinations">Destinations</a>
+      <a href="index.html#hotels">Hôtels</a>
+      <a href="index.html#restaurants">Restaurants</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#aide">Aide</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="connexion.html" class="btn btn-ghost btn-small">Connexion</a>
+      <a href="inscription.html" class="btn btn-primary btn-small">Inscription</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section style="padding-top:140px">
+  <div class="container">
+    <span class="eyebrow text-center" style="display:block">Restons en contact</span>
+    <h2 class="section-title">Contactez-nous</h2>
+    <p class="section-subtitle">Une question, une suggestion ? Notre équipe vous répond rapidement.</p>
+
+    <div class="contact-grid">
+      <div>
+        <div class="form-card" style="box-shadow:var(--shadow-soft)">
+          <form id="contactForm" action="php/contact.php" method="POST" novalidate>
+            <div class="form-group" id="group-name">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom">
+              <span class="error-text">Le nom est requis.</span>
+            </div>
+            <div class="form-group" id="group-email">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="vous@exemple.com">
+              <span class="error-text">Veuillez saisir une adresse e-mail valide.</span>
+            </div>
+            <div class="form-group" id="group-message">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Votre message..."></textarea>
+              <span class="error-text">Le message est requis.</span>
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <div><strong>E-mail</strong>contact@tourismemaroc.ma</div>
+          <div><strong>Téléphone</strong>+212 5 22 00 00 00</div>
+          <div><strong>Adresse</strong>Casablanca, Maroc</div>
+        </div>
+      </div>
+
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps?q=Casablanca,Morocco&output=embed"
+          allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localisation TourismeMaroc">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer mt-40">
+  <div class="container">
+    <div class="footer-bottom">&copy; <span id="year"></span> TourismeMaroc. Tous droits réservés.</div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

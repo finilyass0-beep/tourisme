@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tourisme Maroc — Découvrez la beauté du Maroc</title>
+<meta name="description" content="Plateforme de tourisme au Maroc : destinations, hôtels, restaurants et services pour préparer votre voyage.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome (icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============== NAVBAR ============== -->
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><i class="fa-solid fa-mosque"></i></span>
+      Tourisme<span style="color:var(--color-terracotta)">Maroc</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#accueil">Accueil</a>
+      <a href="index.html#destinations">Destinations</a>
+      <a href="index.html#hotels">Hôtels</a>
+      <a href="index.html#restaurants">Restaurants</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#aide">Aide</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="connexion.html" class="btn btn-ghost btn-small">Connexion</a>
+      <a href="inscription.html" class="btn btn-primary btn-small">Inscription</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============== HERO ============== -->
+<section class="hero" id="accueil">
+  <div class="hero-content">
+    <h1>Découvrez la beauté du Maroc</h1>
+    <p>Des médinas millénaires aux dunes du Sahara, en passant par la côte Atlantique :
+       vivez une expérience marocaine authentique, organisée simplement.</p>
+    <div class="hero-ctas">
+      <a href="#destinations" class="btn btn-primary">Explorer les destinations</a>
+      <a href="#services" class="btn btn-outline">Nos services</a>
+    </div>
+
+    <!-- Search bar -->
+    <form class="search-bar" id="searchForm">
+      <div class="search-field">
+        <label for="searchCity">Ville</label>
+        <select id="searchCity" name="city">
+          <option value="">Toutes les villes</option>
+          <option>Marrakech</option>
+          <option>Casablanca</option>
+          <option>Chefchaouen</option>
+          <option>Agadir</option>
+          <option>Fès</option>
+          <option>Tanger</option>
+        </select>
+      </div>
+      <div class="search-field">
+        <label for="searchBudget">Budget (MAD)</label>
+        <input type="number" id="searchBudget" name="budget" placeholder="Ex: 2000">
+      </div>
+      <div class="search-field">
+        <label for="searchDate">Date</label>
+        <input type="date" id="searchDate" name="date">
+      </div>
+      <button type="submit" class="btn btn-primary">Rechercher</button>
+    </form>
+  </div>
+  <div class="scroll-cue"></div>
+</section>
+
+<!-- ============== DESTINATIONS ============== -->
+<section id="destinations">
+  <div class="container">
+    <span class="eyebrow text-center" style="display:block">À voir</span>
+    <h2 class="section-title">Destinations populaires</h2>
+    <p class="section-subtitle">Six villes emblématiques pour découvrir la diversité culturelle et paysagère du Maroc.</p>
+
+    <div class="grid" id="destinationsGrid">
+      <!-- Cards injected by JS from js/script.js (DESTINATIONS array) -->
+    </div>
+  </div>
+</section>
+
+<div class="zellige-divider"></div>
+
+<!-- ============== HOTELS ============== -->
+<section id="hotels" style="background:var(--color-white)">
+  <div class="container">
+    <span class="eyebrow text-center" style="display:block">Hébergement</span>
+    <h2 class="section-title">Hôtels recommandés</h2>
+    <p class="section-subtitle">Une sélection d'hôtels pour tous les budgets, du riad traditionnel au resort de luxe.</p>
+
+    <div class="grid" id="hotelsGrid"></div>
+  </div>
+</section>
+
+<!-- ============== RESTAURANTS ============== -->
+<section id="restaurants">
+  <div class="container">
+    <span class="eyebrow text-center" style="display:block">Gastronomie</span>
+    <h2 class="section-title">Restaurants à découvrir</h2>
+    <p class="section-subtitle">Tagine, couscous, pastilla... savourez la cuisine marocaine dans des lieux choisis.</p>
+
+    <div class="grid" id="restaurantsGrid"></div>
+  </div>
+</section>
+
+<div class="zellige-divider"></div>
+
+<!-- ============== SERVICES ============== -->
+<section id="services" style="background:var(--color-white)">
+  <div class="container">
+    <span class="eyebrow text-center" style="display:block">Pratique</span>
+    <h2 class="section-title">Nos services</h2>
+    <p class="section-subtitle">Tout ce qu'il faut pour voyager sereinement à travers le Maroc.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+        <h4>GPS / Carte</h4>
+        <p>Localisez les sites touristiques, hôtels et restaurants en temps réel.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-bus"></i></div>
+        <h4>Transport</h4>
+        <p>Trains, bus et locations de voiture pour circuler entre les villes.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
+        <h4>Guide touristique</h4>
+        <p>Réservez un guide local agréé pour vos visites et excursions.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+        <h4>Météo</h4>
+        <p>Prévisions météo locales pour bien préparer votre séjour.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-money-bill-transfer"></i></div>
+        <h4>Convertisseur de devises</h4>
+        <p>Convertissez rapidement le Dirham marocain (MAD) en votre devise.</p>
+        <div class="converter">
+          <input type="number" id="amountInput" value="100">
+          <span>MAD →</span>
+          <select id="currencySelect">
+            <option value="0.093">EUR</option>
+            <option value="0.10">USD</option>
+            <option value="0.085">GBP</option>
+          </select>
+        </div>
+        <div id="converter-result">≈ 9.30 EUR</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-star"></i></div>
+        <h4>Avis &amp; notes</h4>
+        <p>Consultez les avis des voyageurs avant de réserver votre séjour.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== AIDE / FAQ ============== -->
+<section id="aide">
+  <div class="container">
+    <span class="eyebrow text-center" style="display:block">Besoin d'aide ?</span>
+    <h2 class="section-title">Questions fréquentes</h2>
+    <p class="section-subtitle">Les réponses aux questions les plus posées par nos visiteurs.</p>
+
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <button class="accordion-question">
+          Comment réserver un hôtel ?
+          <span class="icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="accordion-answer">
+          <p>Rendez-vous dans la section "Hôtels", choisissez l'établissement qui vous convient
+          et cliquez sur "Réserver". Vous devez être connecté à votre compte pour finaliser la réservation.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-question">
+          Comment puis-je payer ?
+          <span class="icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="accordion-answer">
+          <p>Le paiement s'effectue en ligne par carte bancaire, ou directement sur place selon
+          l'établissement choisi. Toutes les transactions sont sécurisées.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-question">
+          Comment utiliser le GPS ?
+          <span class="icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="accordion-answer">
+          <p>Activez la géolocalisation de votre navigateur ou application mobile, puis ouvrez
+          le service "GPS / Carte" pour voir votre position et les points d'intérêt à proximité.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-question">
+          Comment contacter le support ?
+          <span class="icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="accordion-answer">
+          <p>Utilisez le formulaire de la page "Contact", écrivez-nous par e-mail, ou discutez
+          directement avec notre assistant de voyage via le chatbot en bas à droite de l'écran.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Tourisme<span style="color:var(--color-gold)">Maroc</span></div>
+        <p style="opacity:.8; font-size:.9rem">Votre compagnon de voyage pour explorer le Maroc, de Tanger à Agadir.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#hotels">Hôtels</a></li>
+          <li><a href="#restaurants">Restaurants</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#aide">Aide</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Compte</h4>
+        <ul>
+          <li><a href="inscription.html">Inscription</a></li>
+          <li><a href="connexion.html">Connexion</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fa-solid fa-envelope"></i>&nbsp; contact@tourismemaroc.ma</li>
+          <li><i class="fa-solid fa-phone"></i>&nbsp; +212 5 22 00 00 00</li>
+          <li><i class="fa-solid fa-location-dot"></i>&nbsp; Casablanca, Maroc</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> TourismeMaroc. Tous droits réservés.
+    </div>
+  </div>
+</footer>
+
+<!-- ============== CHATBOT WIDGET ============== -->
+<button class="chatbot-toggle" id="chatbotToggle" aria-label="Assistant de voyage">
+  <i class="fa-solid fa-comment-dots"></i>
+</button>
+<div class="chatbot-window" id="chatbotWindow">
+  <div class="chatbot-header">
+    <span><i class="fa-solid fa-robot"></i>&nbsp; Assistant Voyage</span>
+    <button id="chatbotClose" aria-label="Fermer" style="color:#fff;font-size:1.1rem">&times;</button>
+  </div>
+  <div class="chatbot-messages" id="chatbotMessages">
+    <div class="msg bot">Bonjour 👋 Je suis votre assistant de voyage. Posez-moi une question sur les destinations, hôtels, restaurants ou la météo au Maroc !</div>
+  </div>
+  <form class="chatbot-input" id="chatbotForm">
+    <input type="text" id="chatbotInput" placeholder="Écrivez votre question..." autocomplete="off">
+    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+  </form>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
